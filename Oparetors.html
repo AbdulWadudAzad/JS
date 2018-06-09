@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<script>
+//+Add or Concatenate operator
+var x=10;
+var y=5;
+var result = x+y;
+document.write("result: " + result + "<br/>");
+
+var fname = "Donald";
+var mname = "J";
+var lname = "Trump";
+var fullname = fname + " " + mname + " " + lname;
+document.write("Full Name: " + fullname + "<br/>");
+
+var result2 = x * y;
+document.write("Result (x*y): " + result2 + "<br/>")
+
+var result3 = x / y;
+document.write("Result (x/y): " + result3 + "<br/>")
+
+var result4 = x - y;
+document.write("Result (x-y): " + result4 + "<br/>")
+
+var result5 = x % y;
+document.write("Result (x%y): " + result5 + "<br/>")
+//modular
+// ++incrment --decrement
+++x; //Pre Increment
+--y; //Pre Decrement
+x++; //Post Increment
+y--; //Post Decrement
+document.write("X:" + x + "Y:" + y + "<br/>")
+
+//<less than operator
+var result6 = x < y;
+document.write("Result (x<y): " + result6 + "<br/>")
+
+var result7 = x > y;
+document.write("Result (x>y): " + result7 + "<br/>")
+
+var result8 = x >= y;
+document.write("Result (x>=y): " + result8 + "<br/>")
+
+var result9 = x <= y;
+document.write("Result (x<=y): " + result9 + "<br/>")
+
+
+//logical operator
+// && logical And, === test or strict equality
+var ab = 10;
+var cd = "10";
+if (ab === cd) {
+	document.write("above condition is true"+ "<br/>");
+} else{
+	document.write("above condition is false"+ "<br/>");
+}
+
+
+// && logical And, == test or equality
+if (ab == cd) {
+	document.write("above condition is true"+ "<br/>");
+} else{
+	document.write("above condition is false"+ "<br/>");
+}
+
+// != Notequal
+// && logical not And, !== test or equality
+if (ab !== cd) {
+	document.write("above condition is true"+ "<br/>");
+} else{
+	document.write("above condition is false"+ "<br/>");
+}
+
+// = += -= *= /= %=
+x= 10;//assign
+x+= 5;//x=x5, x=10+5
+x-= 8;//x=x-8, x=10-8, x=2
+x*= 2
+x /+ 5;
+x %=3;//x=x % 3, x=10 % 3, x=1/// vagseh
+document.write("<hr>")
+
+
+var age= 25;
+var rs = age >28 ? true : false ;
+document.write("result:" + rs + "<br/>");
+
+
+var age= 25;
+var rs = age >20 ? true : false ;
+document.write("result:" + rs + "<br/>");
+document.write("<hr>")
+
+
+//typeof operator
+var salary= 50000;
+var nsme = "wadud azad";
+var students= ['azad', 'arefin', 'rakib'];
+var result = true;
+var abc;
+var rs=null;
+document.write("salary for number:" + typeof salary + "<br/>");
+document.write("name for String:" + typeof name + "<br/>");
+document.write("students for Object:" + typeof students + "<br/>");
+document.write("result for Bollean:" + typeof result + "<br/>");
+document.write("abc for undefined:" + typeof abc + "<br/>");
+document.write("rs for null:" + typeof rs + "<br/>");
+document.write("<hr>")
+
+
+//delete operator
+var ppp =[10, 20, 30];
+delete (ppp[1]);
+document.write([ppp]);
+document.write("<hr>")
+
+</script>
+
+<a href="javascript: alert ('Wow! JavaScript is Awsome!!!)">Hit Me</a>
+</body>
+</html>
