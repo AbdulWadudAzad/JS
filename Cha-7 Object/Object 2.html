@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<Style type="text/css">
+h2{
+front-size: 18pt;
+color: #e8b002;
+font-family: verdana;
+}
+
+h3{
+front-size: 18pt;
+color: #6b8ccl;
+font-family: verdana;
+background-color:black;
+}
+</Style>
+<script>
+var acme= new Object();
+acme.management= "management coordinates everything.";//Part of the acme abject.
+acme.management=new Object(); //Creating new objedct
+acme.management.rand="Research and Debvelopment work to develop new and better products and services.";
+acme.finance="Finance keeps traking of the money.";
+acme.production="Production makes the stuff.";
+acme.marketing=new Object();
+acme.marketing.sales="Sales contacts potential clients and sells the product.";
+acme.fulfullment="Fulfullment delivers sold products.";
+var display="<h2>First the properties of the acme odject</h2>";
+for(var counter in acme) {
+display += counter + "<br>";
+}
+dispay += "<h3> And now the values of the properties of management and maketing <h3>";
+dispay += acme.management.rand+"<br>";
+dispay += acme.marketing.sales;
+document.write(dispaly);
+</script>
+</head>
+
+<body bgcolor="#CCCC33">
+</body>
+</html>

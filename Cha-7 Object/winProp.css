@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS Document */
+h3{
+color:#CFF;
+background-color:#FFC;
+font-family:Verdana;
+font-size:16pt;
+}
+.bod{
+color:#CCC;
+font-weight:bold;
+font-family:Verdana;
+font-size:11pt;
+}
+a:link{
+color:#CCC;
+background-color:#CFF;
+}
+h2{
+color:#CFF;
+background-color:#FFC;
+font-size:14pt;
+}
