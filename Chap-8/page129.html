@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script>
+function changeIt() {
+var c1=new Image();
+var n=document.forms[0].hue.value;
+n=parseInt(n);
+c1.src="3.gif"
+document.images[n].src=c1.src;	
+}
+</script>
+</head>
+
+<body>
+<table border cols=7 width="100%" height="75%" bgcolor="#CCCCCC">
+<tr>
+<td align=center valign=center><img name="1" src="1.gif" border0 height="300" width="50"></td>
+<td align=center valign=center><img name="2" src="2.gif" border0 height="300" width="50"></td>
+<td align=center valign=center><img name="3" src="3.gif" border0 height="300" width="50"></td>
+<td align=center valign=center><img name="4" src="1.gif" border0 height="300" width="50"></td>
+<td align=center valign=center><img name="4" src="2.gif" border0 height="300" width="50"></td>
+<td align=center valign=center><img name="5" src="3.gif" border0 height="300" width="50"></td>
+<td align=center valign=center><img name="6" src="1.gif" border0 height="300" width="50"></td>
+</tr>
+
+</table>
+<center>
+<form>
+<input type="text" name="hue" size=1><p>
+<input type="button" value="Click to change color of image;" onClick="changeIt()";>
+</form>
+</center>
+</body>
+</html>

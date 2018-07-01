@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="texr/css">
+            body{
+                background-color: lightgray;
+                font-family: verdana;
+            }
+            h2 {
+                font-size: 16pt;
+                color: royalblue;
+               font-weight: bold;
+            }
+            h3 {
+                font-size: 16pt;
+                color: lightsalmon;
+            }
+            a {color:blueviolet;font-weight: bold;}
+        </style>
+        <script>
+            function fillIn() {
+                document.forms[0].elements[1].value="JavaScript is Here!"
+            }
+        </script>
+    </head>
+    <body bgcolor="lightblue" onkeypress="alert('This was set uo in the body element.')">
+    <center>
+        <h2>Click on the link text, buttton, or text window.<br> Then press any key.</h2>
+        <a href="#" onkeyup="alert('The <a href> did it!');">Link text</a><p>
+        <form>
+        <input type="button" value="Surprise me" onKeyPress="alert('You have to press the Surprise Me button first!')"><p>
+            <input type="text" size="20" onkeydown="fillIn()">
+    </form>
+            </center>
+    
+
+    </body>
+</html>

@@ -1,0 +1,22 @@
+body {
+background-color: #deceal;
+font-family: verdana;
+}
+.header {
+    font-size: 18pt;
+    font-weight: bold;
+    color: red;
+}
+.explain {
+    font-size: 11pt;
+    font-weight: bold;
+    color: #be881d;
+}
+.label {
+    font-size: 14pt;
+    color: #7a8215;
+}
+.bdtext {
+    font-size: 10;
+    color: #7a8215;
+}
