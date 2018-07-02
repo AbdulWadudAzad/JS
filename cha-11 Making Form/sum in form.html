@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script>
+function addEmUp() {
+var sum=parseInt(document.calc.aOne.value)+parseInt(document.calc.aTwo.value);
+document.write(document.calc.aOne.value +"+"+ document.calc.aTwo.value + "="+sum);
+alert(sum);
+}
+</script>
+</head>
+
+<body bgcolor="#CCCCCC">
+<h4>Enter 2 munbers and press the Sum button</h4>
+<form name="calc">
+<input name="aOne" type="text" ><p>
+<input name="aTwo" type="text" ><p>
+<input value="sum" type="button" onClick="addEmUp()" ><p>
+</form>
+</body>
+</html>

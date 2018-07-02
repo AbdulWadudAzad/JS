@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+ <script>
+         for (var limit = 1; limit <= 20; limit++) {
+            var a = false;
+            for (var i = 2; i <= limit; i++) {
+               if (limit%i==0 &amp;&amp; i!==limit) {
+                  a = true;
+               }
+            }
+            if (a === false) {
+               document.write("<br>"+limit);
+            }
+         }
+      </script>
+</body>
+</html>
