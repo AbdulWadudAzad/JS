@@ -1,0 +1,17 @@
+<html>
+<script>
+var a=parseInt(prompt("Enter any number\ngreater than 1",""));
+var divisor= new Array();
+for(var i=1;i<=a;i++)
+  {   
+      if(a%i==0)
+        {
+			divisor.push(i);	
+        }    
+  }
+  if(divisor.length==2)
+  document.write(a+ " is <b>prime</b> since it is divisible by : <b>"+ divisor);
+  else
+  document.write(a+ " is <b>not prime</b> since it is divisible by : <b>"+ divisor);
+</script>
+<html>

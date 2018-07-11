@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script>
+function validationForm() {
+	var x= document.forms["myForm"]["fname"].value;
+if(x=="") {
+alert("Name must be field out");
+return false;
+}
+
+var y= document.forms["myForm"]["age"].value;
+if(y<18||y>70) {
+alert("Age must be between 28 and 70");
+return false;
+}
+}
+
+
+
+function sendFormData() {
+var value1="value1";
+var value2="value2";
+var queryString="?para1="+value1+"&para2="+value2;
+window.location.href="validation.html"+queryString;
+}
+
+
+var queryString=decodeURIComponent(window.location.search);
+queryString=queryString.substring(1);
+var queries=queryString.split("&");
+for(var i=0;i<queries.length;i++) {
+document.write(queries[i]+"<br>");	
+}
+</script>
+</head>
+
+<body>
+<form name="myForm" onsubmit="return validationForm()" method="post" action="validation.html">
+Name: <input type="text" name="fname" /><br>
+Age: <input type="number" name="age" /><br>
+<input type="submit" value="Submit" onSubmit="sendFormData()" />
+</form>
+
+
+</body>
+</html>
