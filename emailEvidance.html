@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form name="form" action="email.html" method="post" onSubmit="emailValidation()">
+Email: <input type="text" name="email"><label id="iemail"></label><br>
+
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+</form>
+<script>
+function emailValidation(){
+	var email=document.forms["form"]["email"].value;
+	
+	if(email==""){
+	document.getElementById('iemail').innerHTML="enter a email address";
+		alert("enter email address");
+	
+
+	}else if(email.indexOf("@",0)<0){
+	document.getElementById('iemail').innerHTML="enter @ in email address";
+	alert("enter @ in email address");
+	
+	}else if(email.indexOf(".",0)<0){
+	document.getElementById('iemail').innerHTML="enter . in email address";
+		alert("enter . in email address");	
+	
+	}else{
+		alert("Email is: "+email);
+		document.write("Email is: "+email);
+	}
+	
+	
+	
+	
+}
+
+</script>
+</body>
+</html>
