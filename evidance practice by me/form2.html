@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style type="text/css">
+label {
+	color: red;
+	padding: 3px 10px;
+}
+
+</style>
+</head>
+
+<body>
+<form name="form" action="form2.html" onsubmit="return addForm()" method="post">
+Name: <input type="text" name="name"/>
+<label id="name"></label><br/>
+
+Id: <input type="number" name="id"/>
+<label id="id"></label><br/>
+
+Password: <input type="password" name="password"/>
+<label id="password"></label><br/>
+
+Email: <input type="email" name="email"/>
+<label id="email"></label><br/>
+
+Gender:<input type="radio" name="gen" value="Male">Male
+	<input type="radio" name="gen" value="Female">Female
+    <label id="igen"></label><br>
+
+
+Education:<input type="checkbox" name="ssc" value="SSC">SSC
+	<input type="checkbox" name="hsc" value="HSC">HSC
+    <label id="education"></label><br>
+    
+
+<input type="submit" value="Submit"/>
+<input type="reset" value="Reset"/>
+</form>
+
+<script>
+function addForm() {
+	var name= document.forms["form"]["name"].value;
+	var id= document.forms["form"]["id"].value;
+	var password= document.forms["form"]["password"].value;
+	
+		var email= document.forms["form"]["email"].value;
+		var gender=document.forms["form"]["gen"].value;
+		
+	var education="";
+	
+	if (document.forms["form"].ssc.checked) {
+		education+= document.forms["form"]["ssc"].value;
+	}
+	if (document.forms["form"].hsc.checked) {
+		education+= document.forms["form"]["hsc"].value;
+	}
+	
+	
+	
+	
+ if(name==""){
+	 document.getElementById('name').innerHTML="Enter your name";
+ }
+ 
+else if(id==""){
+	 document.getElementById('id').innerHTML="Enter your ID number";
+	 return false;
+ }
+ else if(password==""){
+	 document.getElementById('password').innerHTML="Password must enter for login";
+	 return false;
+ }
+ 
+  else if(email==""){
+	 document.getElementById('email').innerHTML="Put your email id";
+	 return false;
+ }
+ 
+else if (gender=="") {
+	document.getElementById('igen').innerHTML="Write a message Gender";
+	return false;
+}
+else if (!document.forms["form"].ssc.checked && !document.forms["form"].hsc.checked) {
+	document.getElementById('education').innerHTML="Write a message Gender";
+	return false;
+}
+ else{
+	document.write("Name:  "+name+"<br>"); 
+	document.write("Id:  "+id+"<br>"); 
+	document.write("Password:  "+password+"<br>");
+	document.write("Email:  "+email+"<br>");
+	document.write("Gender: "+gender+"<br>");
+	document.write("Gender: "+education+"<br>");
+	
+	
+ }
+	
+	
+}
+</script>
+</body>
+</html>

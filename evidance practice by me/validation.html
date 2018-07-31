@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+label{
+padding: 3px 10px;
+color:red;	
+}
+</style>
+</head>
+
+<body>
+<form name="form" action="validation.html" method="post" onSubmit="return validationForm()">
+Name: <input type="text" name="name" /><label id="name"></label><br />
+
+Gender: <input type="radio" name="gender" value="male"/>Male
+<input type="radio" name="gender" value="female"/>Female
+<label id="gender"></label><br />
+
+password:  <input type="password" name="password" /><label id="password"></label><br />
+
+Education: <input type="checkbox" name="ssc" value="ssc"/>SSC
+<input type="checkbox" name="hsc" value="hsc"/>HSC
+<label id="education"></label><br />
+Round: <select name="round">
+<option value="Select a round" >Select a round</option>
+<option value="37">37</option>
+<option value="38">38</option>
+<option value="39">39</option>
+<option value="40">40</option>
+</select><label id="round"></label><br />
+
+Comments: <textarea rows="5" cols="20" name="comments" placeholder="insert at least 10 characters"></textarea>
+<label id="comments"></label><br />
+
+<input type="submit" value="Submit"/>
+<input type="reset" value="Reset"/>
+</form> 
+<script>
+function validationForm() {
+var name=document.forms["form"]["name"].value;
+var gender=document.forms["form"]["gender"].value;
+var password=document.forms["form"]["password"].value;
+var education ="";
+ var ssc = document.forms["form"]["ssc"].value;
+                var hsc = document.forms["form"]["hsc"].value;
+if(document.forms["form"].ssc.checked) {
+	education+=document.forms["form"]["ssc"].value;
+}
+if(document.forms["form"].hsc.checked) {
+	education+=document.forms["form"]["hsc"].value;
+}
+var round = document.forms["form"]["round"].value;
+var comments=document.forms["form"]["comments"].value;
+
+if(name="") {
+	document.getElementById('name').innerHTML="Name must be  filled out"; 
+	 return false;
+}else if(name.length<3) {
+	document.getElementById('name').innerHTML="Name length must be 3 characters";
+	 return false;
+}
+
+else if (gender="") {
+document.getElementById('gender').innerHTML="Select your number"; 
+ return false;	
+}
+else if (password.length<8) {
+document.getElementById('password').innerHTML="Password must be in characters"; 
+ return false;	
+}
+
+else if (!document.forms["form"].ssc.checked && !document.forms["form"].hsc.checked) {
+document.getElementById('education').innerHTML="Select educational qualification"; 
+ return false;	
+}
+
+else if (round="Select a round") {
+document.getElementById('round').innerHTML="Select your round"; 
+ return false;	
+}
+else if (comments.length<10) {
+document.getElementById('comments').innerHTML="Comments length must be 10 characters"; 	
+ return false;
+}
+else {
+document.write("Name: "+name+"<br/>");	
+document.write("Gender: "+gender+"<br/>");
+document.write("Password: "+password+"<br/>");
+document.write("Education: "+education+"<br/>");
+document.write("Round: "+round+"<br/>");
+document.write("Comments: "+comments+"<br/>");
+}
+}
+</script>
+</body>
+</html>

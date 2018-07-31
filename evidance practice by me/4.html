@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+
+<script>
+var u;
+function factorial(n) {
+if(n==0){
+return 1;	
+}else{
+return n*factorial(n-1);	
+}
+}
+
+var number=prompt("Enter a number","1");
+alert(factorial(number));
+document.write("Factorial of your input ("+number+") "+"is: "+factorial(number));
+</script>
+</head>
+
+<body onload="timeOn()">
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<script>
+
+var coun= new Array(4);
+coun [0]='BD';
+coun [1]='JP';
+coun [2]='IND';
+coun [3]='PAK';
+coun [4]='UK';
+document.write(coun);
+document.write("<HR/>");
+//===================================//
+
+document.write(coun.sort(),"<br>");//assending order
+
+document.write("<HR/>");
+//===================================//
+
+document.write(coun.reverse(),"<br>");//desending order
+
+document.write("<HR/>");
+//===================================//
+
+coun.unshift("US");
+document.write(coun,"<br>");
+
+document.write("<HR/>");
+//===================================//
+
+coun.pop("BD");
+document.write(coun,"<br>");
+
+document.write("<HR/>");
+//===================================//
+
+coun.push("GER");
+document.write(coun,"<br>");
+
+document.write("<HR/>");
+//===================================//
+
+
+</script>
+</body>
+</html>

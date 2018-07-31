@@ -1,0 +1,125 @@
+<!DOCTYPE html >
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+label{
+color: red;
+padding: 3px 10px;	
+}
+</style>
+</head>
+
+<body>
+<form name="form" action="Form.html" method="post" onsubmit="return toForm()">
+Name: <input type="text" name="name" /><label id="fname"></label><br />
+
+Id: <input type="number" name="id" /><label id="id"></label><br />
+Email: <input type="email" name="email" /><label id="mail"></label><br />
+
+Education:<input type="checkbox" name="ssc" value="ssc"/>SSC
+<input type="checkbox" name="hsc" value="hsc"/>hSC
+<label id="education"></label><br />
+
+
+
+
+
+
+Round: <select name="round">
+<option value="Select a round">Select a round</option>
+<option value="35">35</option>
+<option value="36">36</option>
+<option value="37">37</option>
+</select><label id="round"></label><br />
+
+Message: <textarea rows="4" cols="20" name="msg" placeholder="
+Write a message with 10 Characters"></textarea>
+<label id="msg"></label><br />
+
+	
+	Gender:<input type="radio" name="gen" value="Male">Male
+	<input type="radio" name="gen" value="Female">Female
+    <label id="igen"></label><br>
+
+
+
+<input type="submit" value="Submit" />
+<input type="reset" name="Reset" />
+</form>
+
+
+<script>
+function toForm() {
+var name=document.forms["form"]["name"].value;
+var id=document.forms["form"]["id"].value;
+var email=document.forms["form"]["email"].value;
+var education="";
+
+if (document.forms["form"].ssc.checked) {
+education += document.forms["form"]["ssc"].value;
+}
+if (document.forms["form"].hsc.checked) {
+education +=", "+ document.forms["form"]["hsc"].value;
+}
+
+
+
+var round=document.forms["form"]["round"].value;
+var msg=document.forms["form"]["msg"].value;
+var gender=document.forms["form"]["gen"].value;
+
+
+if (name=="") {
+	document.getElementById('fname').innerHTML="Enter your name";
+	return false;
+} 
+else if (id=="") {
+	document.getElementById('id').innerHTML="Enter your ID number";
+	return false;
+} 
+else if (email=="") {
+	document.getElementById('mail').innerHTML="Enter your Email address";
+	return false;
+}
+else if (!document.forms["form"].ssc.checked && !document.forms["form"].hsc.checked) {
+	document.getElementById('education').innerHTML="Select your educational qualification";
+	return false;
+} 
+
+
+
+
+
+else if (round=="Select a round") {
+	document.getElementById('round').innerHTML="Write a message mim 10 Character";
+	return false;
+} 
+
+
+else if (msg.length<10) {
+	document.getElementById('msg').innerHTML="Write a message mim 10 Character";
+	return false;
+} 
+else if (gender=="") {
+	document.getElementById('igen').innerHTML="Write a message Gender";
+	return false;
+} 
+
+else {
+	document.write("Name: "+name+"<br>");
+	document.write("Id: "+id+"<br>");
+	document.write("Email: "+email+"<br>");
+	document.write("Message: "+education+"<br>");
+	
+	document.write("Round: "+round+"<br>");
+	document.write("Message: "+msg+"<br>");
+	document.write("Message: "+gender+"<br>");
+	
+}
+}
+
+</script>
+</body>
+</html>
